@@ -13,7 +13,7 @@ const SidePar = () => {
 
   return ( 
     <>
-    <div className="py-4 w-fit absolute top-3 left-3   z-50 block md:hidden  cursor-pointer " onClick={() => setIsOpen((prev) => !prev)}>
+    <div className="py-4 w-fit absolute  left-3   z-50 block md:hidden  cursor-pointer  " onClick={() => setIsOpen((prev) => !prev)}>
         {isOpen ? (
           <CiMenuFries size={30} className="w-7 h-7  z-50 cursor-pointer" />
         ) : (
@@ -26,7 +26,7 @@ const SidePar = () => {
   }`}
 >
 
-      <div className="w-[236px] shadow-sm border min-h-screen   ">
+      <div className="w-[236px] shadow-sm border min-h-screen bg-white  ">
         <div className="flex justify-center py-6 shadow-sm     ">
           <img src={logo} alt="Logo"  className="w-[100px] md:[150px]" />
         </div>
