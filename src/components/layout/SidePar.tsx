@@ -1,8 +1,8 @@
 import { useState } from "react";
 import logo from "../../assets/Group 14.png";
 import { LuLayoutDashboard, LuStethoscope } from "react-icons/lu";
-import { MdBurstMode, MdCreditScore, MdDomain, MdEngineering, MdOutlineSchool, MdOutlineStorefront } from "react-icons/md";
-import { CiMenuFries, CiSettings } from "react-icons/ci";
+import { MdBurstMode, MdCreditScore, MdDomain, MdEngineering, MdMenu, MdOutlineSchool, MdOutlineStorefront } from "react-icons/md";
+import {  CiSettings } from "react-icons/ci";
 import { IoMdClose } from "react-icons/io";
 
 const SidePar = () => {
@@ -15,7 +15,7 @@ const SidePar = () => {
     <>
     <div className="py-4 w-fit absolute  left-3   z-50 block md:hidden  cursor-pointer  " onClick={() => setIsOpen((prev) => !prev)}>
         {isOpen ? (
-          <CiMenuFries size={30} className="w-7 h-7  z-50 cursor-pointer" />
+          <MdMenu  size={30} className="w-7 h-7  z-50 cursor-pointer" />
         ) : (
           <IoMdClose  size={30} className="w-7 h-7 z-50 cursor-pointer fixed " />
         )}
