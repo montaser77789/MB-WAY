@@ -9,11 +9,6 @@ import {
   ResponsiveContainer,
   Area,
 } from "recharts";
-interface DataPoint {
-  name: string;
-  value: number;
-  year: number;
-}
 
 interface AnnualData {
   [key: number]: {
