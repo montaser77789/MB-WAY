@@ -96,7 +96,7 @@ const DashboardMain = () => {
             </div>
           </div>
           <div className="gap-3 md:grid md:grid-cols-12 grid-cols-1 p-1 mt-2">
-            <div className="md:col-span-9 w-full overflow-x-auto scrollbar-thumb-blue_maincolor sidebar-scrollbar  z-10 shadow-md p-2 rounded-md">
+            <div className="md:col-span-9 w-full  scrollbar-thumb-blue_maincolor sidebar-scrollbar  z-10 shadow-md p-2 rounded-md">
               <MyLineChart />
             </div>
             <div className="md:col-span-3 h-full  z-10 shadow-md rounded-md w-full">

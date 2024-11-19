@@ -58,12 +58,9 @@ const MyLineChart = () => {
   const chartData = sortBy === "monthly" ? data : getAnnualData();
 
   return (
-    <div
-      style={{ width: "100%", height: 300, overflowX: "auto" }}
-      className="scrollbar-thumb-blue_maincolor sidebar-scrollbar"
-    >
-      <div className="flex  justify-between">
-        <div>
+    <>
+    <div className="flex w-full  justify-between ">
+        <div className=" ">
           <div>
             <div className="flex items-center gap-2 p-2">
               <span className="w-2 h-2 bg-blue_maincolor rounded-full"></span>
@@ -82,8 +79,13 @@ const MyLineChart = () => {
           <option value="annual">Annual</option>
         </select>
       </div>
+    <div
+      style={{ width: "100%", height: 300, overflowX: "auto" }}
+      className="scrollbar-thumb-blue_maincolor sidebar-scrollbar " 
+    >
+      
 
-      <ResponsiveContainer width="150%" height="85%">
+      <ResponsiveContainer width="150%" height="100%">
         <LineChart data={chartData}>
           <CartesianGrid stroke="#ccc" />
           <XAxis dataKey="name" />
@@ -122,6 +124,8 @@ const MyLineChart = () => {
         </defs>
       </svg>
     </div>
+    </>
+
   );
 };
 
