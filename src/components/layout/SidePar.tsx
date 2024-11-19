@@ -34,6 +34,8 @@ const SidePar = () => {
         className={`fixed top-0 left-0 h-screen w-fit overflow-y-auto scrollbar scrollbar-thumb-blue_maincolor sidebar-scrollbar transform transition-transform duration-300 ease-in-out ${
           isOpen ? "-translate-x-full" : "translate-x-0"
         }`}
+        style={{ zIndex: 40 }}
+
       >
         <div className="w-[236px] shadow-sm border min-h-screen bg-white  ">
           <div className="flex justify-center py-6 shadow-sm     ">

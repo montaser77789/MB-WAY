@@ -5,7 +5,7 @@ import { LuMessageCircle } from "react-icons/lu"
 
 const Navbar = () => {
     return (
-        <header className="container m-auto p-4"> 
+        <header className="container m-auto p-4 z-50"> 
             <div className="flex justify-between items-center">
                 <div className="flex gap-2 items-center">
                     <div >
