@@ -4,6 +4,7 @@ import Navbar from "../components/layout/Navbar";
 
 const RootLayout = () => {
     return (
+        <>
         <div className="overflow-x-hidden">
             <div className="flex justify-between">
                 <SidePar />
@@ -11,8 +12,13 @@ const RootLayout = () => {
                     <Navbar />
                 </div>
             </div>
-            <Outlet />
         </div>
+        <div className="ml-[0px] md:ml-[250px]">
+            <Outlet />
+
+        </div>
+            </>
+
     );
 }
 
