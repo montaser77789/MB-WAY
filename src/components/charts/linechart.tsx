@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import {
   LineChart,
   Line,
@@ -59,7 +59,7 @@ const MyLineChart = () => {
 
   return (
     <>
-    <div className="flex w-full  justify-between ">
+      <div className="flex w-full  justify-between ">
         <div className=" ">
           <div>
             <div className="flex items-center gap-2 p-2">
@@ -79,53 +79,50 @@ const MyLineChart = () => {
           <option value="annual">Annual</option>
         </select>
       </div>
-    <div
-      style={{ width: "100%", height: 300, overflowX: "auto" }}
-      className="scrollbar-thumb-blue_maincolor sidebar-scrollbar " 
-    >
-      
+      <div
+        style={{ width: "100%", height: 300, overflowX: "auto" }}
+        className="scrollbar-thumb-blue_maincolor sidebar-scrollbar "
+      >
+        <ResponsiveContainer width="150%" height="100%">
+          <LineChart data={chartData}>
+            <CartesianGrid stroke="#ccc" />
+            <XAxis dataKey="name" />
+            <YAxis />
+            <Tooltip />
 
-      <ResponsiveContainer width="150%" height="100%">
-        <LineChart data={chartData}>
-          <CartesianGrid stroke="#ccc" />
-          <XAxis dataKey="name" />
-          <YAxis />
-          <Tooltip />
-
-          <Area
-            type="monotone"
-            dataKey="value"
-            stroke="#8884d8"
-            fill="rgba(0, 0, 255, 0.3)" 
-            strokeWidth={3}
-            filter="url(#blue-shadow)" 
-          />
-
-          <Line
-            type="monotone"
-            dataKey="value"
-            stroke="#8884d8"
-            strokeWidth={2}
-          />
-        </LineChart>
-      </ResponsiveContainer>
-
-      <svg width="0" height="0">
-        <defs>
-          <filter id="blue-shadow" x="0" y="0" width="200%" height="200%">
-            <feDropShadow
-              dx="0"
-              dy="4"
-              stdDeviation="6"
-              floodColor="blue"
-              floodOpacity="0.3"
+            <Area
+              type="monotone"
+              dataKey="value"
+              stroke="#8884d8"
+              fill="rgba(0, 0, 255, 0.3)"
+              strokeWidth={3}
+              filter="url(#blue-shadow)"
             />
-          </filter>
-        </defs>
-      </svg>
-    </div>
-    </>
 
+            <Line
+              type="monotone"
+              dataKey="value"
+              stroke="#8884d8"
+              strokeWidth={2}
+            />
+          </LineChart>
+        </ResponsiveContainer>
+
+        <svg width="0" height="0">
+          <defs>
+            <filter id="blue-shadow" x="0" y="0" width="200%" height="200%">
+              <feDropShadow
+                dx="0"
+                dy="4"
+                stdDeviation="6"
+                floodColor="blue"
+                floodOpacity="0.3"
+              />
+            </filter>
+          </defs>
+        </svg>
+      </div>
+    </>
   );
 };
 

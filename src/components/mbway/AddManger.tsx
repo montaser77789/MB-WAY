@@ -1,3 +1,4 @@
+import Button from "../shared/Button";
 import Input from "../shared/Input";
 
 const AddManger = () => {
@@ -206,7 +207,7 @@ const AddManger = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col pb-[13px]  ">
+            <div className="flex flex-col pb-[13px] w-full md:w-[20%] ">
               <div>
                 <p className="text-base font-bold text-blue_maincolor m-0">
                   Functional Specialization
@@ -242,10 +243,10 @@ const AddManger = () => {
                 </div>
               </div>
 
-              <button className="bg-gradient-to-r from-[#0017c2] to-[#000b5c] text-lg font-bold text-white w-[186px] h-14 mt-[52px] rounded-2xl flex items-center justify-center gap-3">
+              <Button className="bg-gradient-to-r from-[#0017c2] to-[#000b5c]  md:w-[186px] w-full text-nowrap h-14 mt-[52px] rounded-2xl flex items-center justify-center gap-3">
                 <div className="w-6 h-6 text-[#d9d9d9]">...</div>
                 Add Manager
-              </button>
+              </Button>
             </div>
           </div>
         </div>
