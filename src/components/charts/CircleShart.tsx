@@ -44,7 +44,7 @@ const MyDonutChart = () => (
       {pieData.map((entry, index) => (
         <div
           key={index}
-          style={{ display: "flex", alignItems: "center", marginRight: "20px" }}
+          style={{ display: "flex", alignItems: "center", marginRight: "50px" }}
         >
           <div
             style={{

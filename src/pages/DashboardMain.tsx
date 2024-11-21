@@ -27,7 +27,9 @@ const DashboardMain = () => {
             <div className="md:w-[calc(50%-0.5rem)] w-full rounded-md border border-gray_maincolor shadow-sm px-3 py-2">
               <div className="flex items-center gap-2 p-2">
                 <span className="w-2 h-2 bg-blue_maincolor rounded-full"></span>
-                <p className="text-blue_maincolor font-bold">{t("almostFinished")}</p>
+                <p className="text-blue_maincolor font-bold">
+                  {t("almostFinished")}
+                </p>
               </div>
               <div className="flex items-center gap-2 p-2 text-blue_maincolor">
                 <div className="w-full">
@@ -58,10 +60,10 @@ const DashboardMain = () => {
               </div>
               <div className="w-full flex gap-2 justify-center">
                 <Button className="text-nowrap" variant={"outline"}>
-                  <TbCalendarClock size={20} /> {t("remindLater")}
+                  <TbCalendarClock size={20} className="mr-2" /> {t("remindLater")}
                 </Button>
                 <Button className="text-nowrap" variant={"default"}>
-                  <IoIosNotificationsOutline size={20} /> {t("employeeAlert")}
+                  <IoIosNotificationsOutline className="mr-2" size={20} /> {t("employeeAlert")}
                 </Button>
               </div>
             </div>
@@ -69,7 +71,9 @@ const DashboardMain = () => {
             <div className="md:w-[calc(50%-0.5rem)] w-full rounded-md border border-gray_maincolor shadow-sm px-3 py-2">
               <div className="flex items-center gap-2 p-2">
                 <span className="w-2 h-2 bg-blue_maincolor rounded-full"></span>
-                <p className="text-blue_maincolor font-bold">{t("almostFinished")}</p>
+                <p className="text-blue_maincolor font-bold">
+                  {t("almostFinished")}
+                </p>
               </div>
               <div className="flex items-center gap-2 p-2 text-blue_maincolor">
                 <div className="w-full">
@@ -99,11 +103,11 @@ const DashboardMain = () => {
                 </div>
               </div>
               <div className="w-full flex gap-2 justify-center">
-                <Button className="text-nowrap" variant={"outline"}>
-                  <TbCalendarClock size={20} /> {t("remindLater")}
+                <Button  className="text-nowrap" variant={"outline"}>
+                  <TbCalendarClock className="mr-2" size={20} /> {t("remindLater")}
                 </Button>
                 <Button className="text-nowrap" variant={"default"}>
-                  <IoIosNotificationsOutline size={20} /> {t("employeeAlert")}
+                  <IoIosNotificationsOutline className="mr-2" size={20} /> {t("employeeAlert")}
                 </Button>
               </div>
             </div>
@@ -119,14 +123,13 @@ const DashboardMain = () => {
           </div>
         </div>
         <div
-  className={`shadow-md rounded-md p-1 bg-white overflow-y-auto scrollbar scrollbar-thumb-blue_maincolor sidebar-scrollbar 
+          className={`shadow-md rounded-md p-1 bg-white overflow-y-auto scrollbar scrollbar-thumb-blue_maincolor sidebar-scrollbar 
     md:col-span-2 md:transform-none md:static
     fixed top-0 bottom-0 right-0  transform transition-transform duration-500 ease-in-out ${
       isOpenInboxMessage ? "translate-x-0" : "translate-x-full"
     }`}
-    style={{ zIndex: 40 }}
-
->
+          style={{ zIndex: 40 }}
+        >
           <div className="box-border flex flex-col items-stretch justify-center h-[120px] md:h-[70px] border-b-4 border-gray-400 ">
             <div className="flex flex-row items-center justify-between md:justify-start  w-full h-full  ">
               <div className="flex flex-row items-center justify-between ">

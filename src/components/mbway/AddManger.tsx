@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import Button from "../shared/Button";
 import Input from "../shared/Input";
+import { FaPlus } from "react-icons/fa";
 
 const AddManger = () => {
   const { t } = useTranslation();
@@ -54,7 +55,7 @@ const AddManger = () => {
           <div className="flex justify-between items-start flex-col md:flex-row flex-wrap md:gap-[79px] box-border mt-2 ">
             <div className="w-[100.00%] md:w-[70%]  grow-0 shrink-0 basis-auto box-border ">
               <div>
-                <p className="  text-base font-bold leading-4 text-blue_maincolor m-0 p-0">
+                <p className="  text-base font-bold leading-4 px-2 text-blue_maincolor my-2">
                   {t("personalInformation")}
                 </p>
                 <div className="flex md:flex-row flex-col gap-[15px]">
@@ -136,7 +137,7 @@ const AddManger = () => {
                       <Input
                         id="birthdate"
                         type="date"
-                        defaultValue="2000-03-16"
+                        placeholder="2000-03-16"
                         className="border border-[#9c9c9c] bg-white text-sm font-bold text-gray-700 rounded-lg h-12 px-3"
                       />
                     </div>
@@ -153,7 +154,7 @@ const AddManger = () => {
                         <Input
                           id="duration"
                           type="number"
-                          defaultValue="5"
+                          placeholder="3"
                           className="border border-[#9c9c9c]  bg-white text-sm font-bold text-gray-700 rounded-lg h-12 px-3"
                         />
                       </div>
@@ -169,7 +170,7 @@ const AddManger = () => {
                         <Input
                           id="yearsOfExperience"
                           type="number"
-                          defaultValue="3"
+                          placeholder="3"
                           className="border border-[#9c9c9c]  bg-white text-sm font-bold text-gray-700 rounded-lg h-12 px-3"
                         />
                       </div>
@@ -202,6 +203,7 @@ const AddManger = () => {
                       <Input
                         id="managerFile"
                         type="file"
+                        placeholder=""
                         className="border border-[#9c9c9c] bg-white text-sm font-bold text-gray-700 rounded-lg h-12 px-3 file:bg-blue_maincolor file:text-white file:rounded-md file:cursor-pointer"
                       />
                     </div>
@@ -245,7 +247,7 @@ const AddManger = () => {
               </div>
 
               <Button className="bg-gradient-to-r from-[#0017c2] to-[#000b5c]  md:w-[186px] w-full text-nowrap h-14 mt-[52px] rounded-2xl flex items-center justify-center gap-3">
-                <div className="w-6 h-6 text-[#d9d9d9]">...</div>
+              <FaPlus />
                 {t("addManager")}
               </Button>
             </div>
