@@ -7,20 +7,17 @@ import { toogleInboxMessage } from "../../app/Slices/InboxMessage";
 import { useTranslation } from "react-i18next";
 import Button from "../shared/Button";
 
-
 const Navbar = () => {
-    const {t} = useTranslation();
+  const { t } = useTranslation();
   const dispatch = useAppDispatch();
 
   const toogleMessage = () => {
     dispatch(toogleInboxMessage());
   };
-  const {  i18n } = useTranslation();
+  const { i18n } = useTranslation();
   console.log(i18n.language);
-  
 
-
-  const changeLanguage = (lang: 'en' | 'tr') => {
+  const changeLanguage = (lang: "en" | "tr") => {
     i18n.changeLanguage(lang); // تغيير اللغة
   };
   return (
@@ -63,9 +60,12 @@ const Navbar = () => {
           </div>
         </div>
         <div>
-
-       { i18n.language === "tr" && <Button className="bg_blue_maincolor" onClick={() => changeLanguage('en')}>English</Button>}
-        { i18n.language === "en" && <Button className="bg_blue_maincolor" onClick={() => changeLanguage('tr')}>Türkçe</Button>}
+          <Button
+            className="bg-blue_maincolor"
+            onClick={() => changeLanguage(i18n.language === "tr" ? "en" : "tr")}
+          >
+            {i18n.language === "tr" ? "English" : "Türkçe"}
+          </Button>
         </div>
       </div>
     </header>
