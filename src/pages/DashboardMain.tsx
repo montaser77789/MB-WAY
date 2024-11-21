@@ -1,13 +1,24 @@
 import { TbCalendarClock } from "react-icons/tb";
 import img from "../../src/assets/rb_2011 1.png";
 import Button from "../components/shared/Button";
-import { IoIosNotificationsOutline } from "react-icons/io";
+import { IoIosNotificationsOutline, IoMdClose } from "react-icons/io";
 import MyLineChart from "../components/charts/linechart";
 import MyDonutChart from "../components/charts/CircleShart";
 import personalImg from "../../src/assets/Ellipse 38.png";
 import AddManger from "../components/mbway/AddManger";
+import { useSelector } from "react-redux";
+import { RootState, useAppDispatch } from "../app/store";
+import { toogleInboxMessage } from "../app/Slices/InboxMessage";
+import { useTranslation } from "react-i18next";
 
 const DashboardMain = () => {
+  const { t } = useTranslation();
+  const isOpenInboxMessage = useSelector(
+    (state: RootState) => state.Message.isOpen
+  );
+  console.log(isOpenInboxMessage);
+  const dispatch = useAppDispatch();
+
   return (
     <div className="overflow-x-hidden">
       <div className="gap-3 md:grid md:grid-cols-12 grid-cols-1 p-1">
@@ -16,26 +27,26 @@ const DashboardMain = () => {
             <div className="md:w-[calc(50%-0.5rem)] w-full rounded-md border border-gray_maincolor shadow-sm px-3 py-2">
               <div className="flex items-center gap-2 p-2">
                 <span className="w-2 h-2 bg-blue_maincolor rounded-full"></span>
-                <p className="text-blue_maincolor font-bold">Almost finished</p>
+                <p className="text-blue_maincolor font-bold">{t("almostFinished")}</p>
               </div>
               <div className="flex items-center gap-2 p-2 text-blue_maincolor">
                 <div className="w-full">
                   <p className="font-bold text-[16px] text-nowrap break-words mb-3">
-                    Deadline :{" "}
+                    {t("deadline")} :{" "}
                     <span className="font-medium break-words">18/12/2024</span>
                   </p>
                   <p className="font-bold text-[16px] text-nowrap break-words mb-3">
-                    Section :{" "}
+                    {t("section")} :{" "}
                     <span className="font-medium break-words">commerce</span>
                   </p>
                   <p className="font-bold text-[16px] text-nowrap break-words mb-3">
-                    Employee :{" "}
+                    {t("employee")} :{" "}
                     <span className="font-medium break-words">
                       Justin Carder
                     </span>
                   </p>
                   <p className="font-bold text-[16px] text-nowrap break-words mb-3">
-                    Manager :{" "}
+                    {t("manager")} :{" "}
                     <span className="font-medium break-words">
                       Justin Carder
                     </span>
@@ -47,10 +58,10 @@ const DashboardMain = () => {
               </div>
               <div className="w-full flex gap-2 justify-center">
                 <Button className="text-nowrap" variant={"outline"}>
-                  <TbCalendarClock size={20} /> Remind later
+                  <TbCalendarClock size={20} /> {t("remindLater")}
                 </Button>
                 <Button className="text-nowrap" variant={"default"}>
-                  <IoIosNotificationsOutline size={20} /> Employee alert
+                  <IoIosNotificationsOutline size={20} /> {t("employeeAlert")}
                 </Button>
               </div>
             </div>
@@ -58,26 +69,26 @@ const DashboardMain = () => {
             <div className="md:w-[calc(50%-0.5rem)] w-full rounded-md border border-gray_maincolor shadow-sm px-3 py-2">
               <div className="flex items-center gap-2 p-2">
                 <span className="w-2 h-2 bg-blue_maincolor rounded-full"></span>
-                <p className="text-blue_maincolor font-bold">Almost finished</p>
+                <p className="text-blue_maincolor font-bold">{t("almostFinished")}</p>
               </div>
               <div className="flex items-center gap-2 p-2 text-blue_maincolor">
                 <div className="w-full">
                   <p className="font-bold text-[16px] text-nowrap break-words mb-3">
-                    Deadline :{" "}
+                    {t("deadline")} :{" "}
                     <span className="font-medium break-words">18/12/2024</span>
                   </p>
                   <p className="font-bold text-[16px] text-nowrap break-words mb-3">
-                    Section :{" "}
+                    {t("section")} :{" "}
                     <span className="font-medium break-words">commerce</span>
                   </p>
                   <p className="font-bold text-[16px] text-nowrap break-words mb-3">
-                    Employee :{" "}
+                    {t("employee")} :{" "}
                     <span className="font-medium break-words">
                       Justin Carder
                     </span>
                   </p>
                   <p className="font-bold text-[16px] text-nowrap break-words mb-3">
-                    Manager :{" "}
+                    {t("manager")} :{" "}
                     <span className="font-medium break-words">
                       Justin Carder
                     </span>
@@ -89,10 +100,10 @@ const DashboardMain = () => {
               </div>
               <div className="w-full flex gap-2 justify-center">
                 <Button className="text-nowrap" variant={"outline"}>
-                  <TbCalendarClock size={20} /> Remind later
+                  <TbCalendarClock size={20} /> {t("remindLater")}
                 </Button>
                 <Button className="text-nowrap" variant={"default"}>
-                  <IoIosNotificationsOutline size={20} /> Employee alert
+                  <IoIosNotificationsOutline size={20} /> {t("employeeAlert")}
                 </Button>
               </div>
             </div>
@@ -107,27 +118,42 @@ const DashboardMain = () => {
             <AddManger />
           </div>
         </div>
-        {/* fixed bg-white min-h-screen  z-10  */}
-        <div className="col-span-2 shadow-md rounded-md p-1  ">
-          <div className="box-border flex flex-col items-stretch justify-center h-[86px] border-b-4 border-gray-400 ">
-            <div className="flex flex-row items-center justify-start">
-              <span className="w-2 h-2 bg-blue_maincolor rounded-full"></span>
-              <p className="ml-1 text-[16px] font-bold leading-[16px] text-blue_maincolor ">
-                Inbox message
-              </p>
+        <div
+  className={`shadow-md rounded-md p-1 bg-white overflow-y-auto scrollbar scrollbar-thumb-blue_maincolor sidebar-scrollbar 
+    md:col-span-2 md:transform-none md:static
+    fixed top-0 bottom-0 right-0  transform transition-transform duration-500 ease-in-out ${
+      isOpenInboxMessage ? "translate-x-0" : "translate-x-full"
+    }`}
+    style={{ zIndex: 40 }}
+
+>
+          <div className="box-border flex flex-col items-stretch justify-center h-[120px] md:h-[70px] border-b-4 border-gray-400 ">
+            <div className="flex flex-row items-center justify-between md:justify-start  w-full h-full  ">
+              <div className="flex flex-row items-center justify-between ">
+                <span className="w-2 h-2 bg-blue_maincolor rounded-full"></span>
+                <p className="ml-1 text-[16px] font-bold leading-[16px] text-blue_maincolor ">
+                  {t("inboxMessage")}
+                </p>
+              </div>
+              <div onClick={() => dispatch(toogleInboxMessage())}>
+                <IoMdClose
+                  size={20}
+                  className="w-7 h-7 z-50 cursor-pointer  block md:hidden color-blue_maincolor"
+                />
+              </div>
             </div>
             <div className="flex flex-row items-center justify-start mt-[26px]">
               <div className="box-border flex flex-col items-stretch justify-center w-[85px]">
                 <p className="text-center text-[16px] font-bold leading-[16px] text-blue-700 cursor-pointer">
-                  Manager
+                  {t("manager")}
                 </p>
-                <div className="mt-[8.5px] border-t-4 border-blue-700" />
+                <div className="mt-[10px] border-t-4 border-blue-700" />
               </div>
               <div className="box-border flex flex-col items-stretch justify-center w-[85px] ml-[13px]">
                 <p className="text-center text-[16px] font-bold leading-[16px] text-gray-400 cursor-pointer">
-                  Employee
+                  {t("employee")}
                 </p>
-                <div className="mt-[8.5px] border-t-4 border-gray-400" />
+                <div className="mt-[10px] border-t-4 border-gray-400" />
               </div>
             </div>
           </div>

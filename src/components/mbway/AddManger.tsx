@@ -1,7 +1,9 @@
+import { useTranslation } from "react-i18next";
 import Button from "../shared/Button";
 import Input from "../shared/Input";
 
 const AddManger = () => {
+  const { t } = useTranslation();
   return (
     <>
       <div data-ignore="used only for top most containter width block">
@@ -11,7 +13,7 @@ const AddManger = () => {
               <span className="w-2 h-2 bg-blue_maincolor rounded-full"></span>
 
               <p className=" text-xl font-bold leading-5 text-blue_maincolor grow-0 shrink-0 basis-auto ml-[7px] m-0 p-0">
-                Quick addition
+                {t("quickAddition")}
               </p>
             </div>
             <div className="flex flex-wrap justify-start items-center gap-4 sm:flex-row sm:gap-[23px]">
@@ -19,7 +21,7 @@ const AddManger = () => {
               <div className="flex items-center gap-2 sm:gap-[3px]">
                 <span className="w-2 h-2 bg-blue_maincolor rounded-full"></span>
                 <p className="text-base font-bold leading-4 text-[#9c9c9c] m-0 p-0">
-                  Task
+                  {t("task")}
                 </p>
               </div>
 
@@ -27,7 +29,7 @@ const AddManger = () => {
               <div className="flex items-center gap-2 sm:gap-[3px]">
                 <span className="w-2 h-2 bg-blue_maincolor rounded-full"></span>
                 <p className="text-base font-bold leading-4 text-blue_maincolor m-0 p-0">
-                  Employee
+                  {t("employee")}
                 </p>
               </div>
 
@@ -35,7 +37,7 @@ const AddManger = () => {
               <div className="flex items-center gap-2 sm:gap-[3px]">
                 <span className="w-2 h-2 bg-blue_maincolor rounded-full"></span>
                 <p className="text-base font-bold leading-4 text-[#9c9c9c] m-0 p-0">
-                  Meeting
+                  {t("meeting")}
                 </p>
               </div>
 
@@ -43,7 +45,7 @@ const AddManger = () => {
               <div className="flex items-center gap-2 sm:gap-[3px]">
                 <span className="w-2 h-2 bg-blue_maincolor rounded-full"></span>
                 <p className="text-base font-bold leading-4 text-[#9c9c9c] m-0 p-0">
-                  Manager
+                  {t("manager")}
                 </p>
               </div>
             </div>
@@ -53,7 +55,7 @@ const AddManger = () => {
             <div className="w-[100.00%] md:w-[70%]  grow-0 shrink-0 basis-auto box-border ">
               <div>
                 <p className="  text-base font-bold leading-4 text-blue_maincolor m-0 p-0">
-                  Personal information
+                  {t("personalInformation")}
                 </p>
                 <div className="flex md:flex-row flex-col gap-[15px]">
                   <div className="grow shrink w-full md:w-auto">
@@ -63,7 +65,7 @@ const AddManger = () => {
                         className="text-sm font-bold leading-[14px] text-blue_maincolor mb-2"
                         htmlFor="name"
                       >
-                        Name
+                        {t("name")}
                       </label>
                       <Input
                         id="name"
@@ -79,7 +81,7 @@ const AddManger = () => {
                         className="text-sm font-bold leading-[14px] text-blue_maincolor mb-2"
                         htmlFor="nationalNumber"
                       >
-                        National Number
+                        {t("nationalNumber")}
                       </label>
                       <Input
                         id="nationalNumber"
@@ -95,7 +97,7 @@ const AddManger = () => {
                         className="text-sm font-bold leading-[14px] text-blue_maincolor mb-2"
                         htmlFor="email"
                       >
-                        Email
+                        {t("email")}
                       </label>
                       <Input
                         id="email"
@@ -111,7 +113,7 @@ const AddManger = () => {
                         className="text-sm font-bold leading-[14px] text-blue_maincolor mb-2"
                         htmlFor="phone"
                       >
-                        Phone
+                        {t("phone")}
                       </label>
                       <Input
                         id="phone"
@@ -129,9 +131,9 @@ const AddManger = () => {
                         htmlFor="birthdate"
                         className="text-base font-bold text-blue_maincolor"
                       >
-                        Birth of Date
+                        {t("birthDate")}
                       </label>
-                      <input
+                      <Input
                         id="birthdate"
                         type="date"
                         defaultValue="2000-03-16"
@@ -146,9 +148,9 @@ const AddManger = () => {
                           htmlFor="duration"
                           className="text-base font-bold text-blue_maincolor"
                         >
-                          Duration
+                          {t("duration")}
                         </label>
-                        <input
+                        <Input
                           id="duration"
                           type="number"
                           defaultValue="5"
@@ -162,9 +164,9 @@ const AddManger = () => {
                           htmlFor="yearsOfExperience"
                           className="text-base font-bold text-blue_maincolor"
                         >
-                          Years of Experience
+                          {t("yearsOfExperience")}
                         </label>
-                        <input
+                        <Input
                           id="yearsOfExperience"
                           type="number"
                           defaultValue="3"
@@ -179,9 +181,9 @@ const AddManger = () => {
                         htmlFor="contractType"
                         className="text-base font-bold text-blue_maincolor"
                       >
-                        Contract Type
+                        {t("contractType")}
                       </label>
-                      <input
+                      <Input
                         id="contractType"
                         type="text"
                         placeholder="Full time (on-site)"
@@ -195,9 +197,9 @@ const AddManger = () => {
                         htmlFor="managerFile"
                         className="text-base font-bold text-blue_maincolor"
                       >
-                        Manager File
+                        {t("managerFile")}
                       </label>
-                      <input
+                      <Input
                         id="managerFile"
                         type="file"
                         className="border border-[#9c9c9c] bg-white text-sm font-bold text-gray-700 rounded-lg h-12 px-3 file:bg-blue_maincolor file:text-white file:rounded-md file:cursor-pointer"
@@ -210,25 +212,24 @@ const AddManger = () => {
             <div className="flex flex-col pb-[13px] w-full md:w-[20%] ">
               <div>
                 <p className="text-base font-bold text-blue_maincolor m-0">
-                  Functional Specialization
+                  {t("functionalSpecialization")}
                 </p>
                 <div className="w-full box-border mt-4">
                   {[
-                    { id: "medical", label: "Medical" },
-                    { id: "tourism", label: "Tourism" },
-                    { id: "engineering", label: "Engineering" },
-                    { id: "commerce", label: "Commerce" },
-                    { id: "real-estate", label: "Real Estate" },
-                    { id: "graphics", label: "Graphics" },
+                    { id: "medical", label: t("medical") },
+                    { id: "tourism", label: t("tourism") },
+                    { id: "engineering", label: t("engineering") },
+                    { id: "commerce", label: t("commerce") },
+                    { id: "real-estate", label: t("RealEstate") },
+                    { id: "graphics", label: t("graphics") },
                   ].map(({ id, label }) => (
                     <div key={id} className="flex items-center mt-2">
                       {/* مربع الاختيار */}
                       <input
                         type="checkbox"
                         id={id}
-                        className="peer h-6 w-6 border border-gray-400 rounded-[3px] flex items-center justify-center peer-checked:bg-blue_maincolor"
+                        className="peer h-6 w-6 border border-gray-400 rounded-[3px] flex items-center justify-center peer-checked:bg-blue_maincolor cursor-pointer"
                       />
-                      {/* التسمية مع ربطها بمربع الاختيار */}
                       <label
                         htmlFor={id}
                         className="flex items-center cursor-pointer"
@@ -245,7 +246,7 @@ const AddManger = () => {
 
               <Button className="bg-gradient-to-r from-[#0017c2] to-[#000b5c]  md:w-[186px] w-full text-nowrap h-14 mt-[52px] rounded-2xl flex items-center justify-center gap-3">
                 <div className="w-6 h-6 text-[#d9d9d9]">...</div>
-                Add Manager
+                {t("addManager")}
               </Button>
             </div>
           </div>

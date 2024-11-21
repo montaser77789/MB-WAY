@@ -12,17 +12,32 @@ import {
 } from "react-icons/md";
 import { CiSettings } from "react-icons/ci";
 import { IoMdClose } from "react-icons/io";
+import { useSelector } from "react-redux";
+import { RootState, useAppDispatch } from "../../app/store";
+import { toogleInboxMessage } from "../../app/Slices/InboxMessage";
+import { useTranslation } from "react-i18next";
 
 const SidePar = () => {
+  const { t } = useTranslation();
+  const isOpenInboxMessage = useSelector(
+    (state: RootState) => state.Message.isOpen
+  );
+  console.log(isOpenInboxMessage);
+  const dispatch = useAppDispatch();
   const [active, setActive] = useState("Dashboard");
   const [isOpen, setIsOpen] = useState(false);
   console.log(isOpen);
+
+  const toogleSidebar = () => {
+    setIsOpen((prev) => !prev);
+    if(isOpenInboxMessage){dispatch(toogleInboxMessage())}
+  };
 
   return (
     <>
       <div
         className="py-4 w-fit absolute  left-3   z-50 block md:hidden  cursor-pointer  "
-        onClick={() => setIsOpen((prev) => !prev)}
+        onClick={() =>{toogleSidebar()}}
       >
         {isOpen ? (
           <MdMenu size={30} className="w-7 h-7  z-50 cursor-pointer" />
@@ -53,7 +68,7 @@ const SidePar = () => {
                 onClick={() => setActive("Dashboard")}
               >
                 <LuLayoutDashboard />
-                Dashboard
+                {t("Dashboard")}
               </li>
               <li
                 className={`flex items-center gap-2 px-2 py-4 border border-gray_maincolor mb-1 cursor-pointer ${
@@ -64,7 +79,7 @@ const SidePar = () => {
                 onClick={() => setActive("Medical")}
               >
                 <LuStethoscope />
-                Medical
+                {t("Medical")}
               </li>
 
               <li
@@ -76,7 +91,7 @@ const SidePar = () => {
                 onClick={() => setActive("Tourism")}
               >
                 <MdCreditScore />
-                Tourism
+                {t("Tourism")}
               </li>
 
               <li
@@ -88,7 +103,7 @@ const SidePar = () => {
                 onClick={() => setActive("Engineering")}
               >
                 <MdEngineering />
-                Engineering
+                {t("Engineering")}
               </li>
 
               <li
@@ -100,7 +115,7 @@ const SidePar = () => {
                 onClick={() => setActive("Education")}
               >
                 <MdOutlineSchool />
-                Education
+                {t("Education")}
               </li>
 
               <li
@@ -112,7 +127,7 @@ const SidePar = () => {
                 onClick={() => setActive("Trade")}
               >
                 <MdOutlineStorefront />
-                Trade & Commerce
+                {t("TradeCommerce")}
               </li>
 
               <li
@@ -124,7 +139,7 @@ const SidePar = () => {
                 onClick={() => setActive("Real")}
               >
                 <MdDomain />
-                Real Estate
+                {t("RealEstate")}
               </li>
 
               <li
@@ -136,7 +151,7 @@ const SidePar = () => {
                 onClick={() => setActive("Graphics")}
               >
                 <MdBurstMode />
-                Graphics
+                {t("Graphics")}
               </li>
 
               <li
@@ -148,7 +163,7 @@ const SidePar = () => {
                 onClick={() => setActive("Settings")}
               >
                 <CiSettings />
-                Settings
+                {t("Settings")}
               </li>
             </ul>
           </div>

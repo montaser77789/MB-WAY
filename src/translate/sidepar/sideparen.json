@@ -1,0 +1,11 @@
+{ 
+    "Dashboard" : "Dashboard",
+    "Medical" : "Medical",
+    "Tourism" : "Tourism",
+    "Engineering" : "Engineering",
+    "Education" : "Education",
+    "TradeCommerce" : "Trade & Commerce",
+    "RealEstate" : " Real Estate",
+    "Graphics" : "Graphics",
+    "Settings" : "Settings"
+}

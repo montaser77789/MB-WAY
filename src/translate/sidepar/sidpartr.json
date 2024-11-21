@@ -1,0 +1,11 @@
+{ 
+    "Dashboard": "Gösterge Paneli",
+    "Medical": "Tıp",
+    "Tourism": "Turizm",
+    "Engineering": "Mühendislik",
+    "Education": "Eğitim",
+    "TradeCommerce": "Ticaret ve Ticaret",
+    "RealEstate": "Emlak",
+    "Graphics" : "Grafikler",
+    "Settings": "Ayarlar"
+}

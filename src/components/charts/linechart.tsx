@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import {
   LineChart,
   Line,
@@ -54,6 +55,8 @@ const getAnnualData = (): { name: string; value: number }[] => {
 };
 
 const MyLineChart = () => {
+  const { t } = useTranslation();
+
   const [sortBy, setSortBy] = useState("monthly");
   const chartData = sortBy === "monthly" ? data : getAnnualData();
 
@@ -65,7 +68,7 @@ const MyLineChart = () => {
             <div className="flex items-center gap-2 p-2">
               <span className="w-2 h-2 bg-blue_maincolor rounded-full"></span>
               <p className="text-blue_maincolor font-bold">
-                Overall performance
+                {t("overallPerformance")}
               </p>
             </div>
           </div>
@@ -75,8 +78,8 @@ const MyLineChart = () => {
           value={sortBy}
           onChange={(e) => setSortBy(e.target.value)}
         >
-          <option value="monthly">Monthly</option>
-          <option value="annual">Annual</option>
+          <option value="monthly">{t("monthly")}</option>
+          <option value="annual">{t("yearly")}</option>
         </select>
       </div>
       <div
