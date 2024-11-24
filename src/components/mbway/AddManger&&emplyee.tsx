@@ -8,7 +8,7 @@ import Addmeeting from "./AdditionMainDashBoard/Addmeeting";
 
 const AddMangerAndEmplyee = () => {
   const { t } = useTranslation();
-  const [ activeTab, setActiveTab ] = useState("meeting");
+  const [ activeTab, setActiveTab ] = useState("employee");
   return (
     <>
       <div  className=" shadow-lg p-2 border border-gray_maincolor rounded-lg mt-10">

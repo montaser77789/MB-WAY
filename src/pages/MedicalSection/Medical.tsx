@@ -23,7 +23,7 @@ const Medical = () => {
   const [isScrollable, setIsScrollable] = useState(false);
 
   const handleClick = () => {
-    setIsScrollable((prev) => !prev); // تغيير حالة التمرير
+    setIsScrollable((prev) => !prev); 
   };
 
   return (
@@ -57,6 +57,11 @@ const Medical = () => {
           </div>
         ))}
       </div>
+
+      
+      <div className="grid grid-cols-12 gap-3 h-[100px] bg-black mt-4">
+
+</div>
 
       {/* القسم الثاني */}
       <div className="grid grid-cols-12 gap-3 mt-4">
@@ -100,3 +105,5 @@ const Medical = () => {
 };
 
 export default Medical;
+
+
