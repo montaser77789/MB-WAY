@@ -21,17 +21,17 @@ const Navbar = () => {
     i18n.changeLanguage(lang); // تغيير اللغة
   };
   return (
-    <header className="container m-auto p-4 z-50">
-      <div className="flex justify-between items-center">
+<header className="p-4 z-50 w-full">
+<div className="flex justify-between items-center max-w-7xl mx-auto">
         <div className="flex gap-2 items-center">
           <div>
             <img
-              className="w-10 h-10 border rounded-full hidden md:block"
+              className="w-10 h-10 border rounded-full hidden lg:block"
               src={personal}
             />
           </div>
 
-          <h2 className="text-blue_maincolor text-[18px] md:text-[26px] font-bold">
+          <h2 className="text-blue_maincolor text-[18px] lg:text-[26px] font-bold">
             {t("Welcome")}
           </h2>
         </div>
@@ -50,7 +50,7 @@ const Navbar = () => {
               <span className="w-2 h-2 bg-red-500 rounded-full top-0 right-0 absolute"></span>
             </div>
             <div
-              className="relative block md:hidden cursor-pointer"
+              className="relative block lg:hidden cursor-pointer"
               onClick={toogleMessage}
             >
               <LuMessageCircle size={22} />

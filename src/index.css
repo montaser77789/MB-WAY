@@ -22,4 +22,10 @@ body {
   .sidebar-scrollbar::-webkit-scrollbar-track {
     background-color: #f0f0f0; /* لون الخلفية */
   }
+
+  @layer {
+    .container  {
+      @apply m-auto
+    }
+  }
   

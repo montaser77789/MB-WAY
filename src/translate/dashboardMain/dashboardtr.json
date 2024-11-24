@@ -28,6 +28,8 @@
         "realEstate": "Emlak",
         "graphics": "Grafikler",
         "addManager": "Yönetici Ekle",
+        "addEmployee": "Çalışan Ekle",
+        "addTask": "Görev Ekle",
         "inboxMessage" : "Gelen Kutusu"
       
   }
