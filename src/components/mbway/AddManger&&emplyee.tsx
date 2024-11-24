@@ -12,8 +12,8 @@ const AddMangerAndEmplyee = () => {
   return (
     <>
       <div  className=" shadow-lg p-2 border border-gray_maincolor rounded-lg mt-10">
-        <div className="bg-[white] box-border flex justify-start items-stretch flex-col  rounded-2xl w-full ">
-          <div className="flex justify-between items-center flex-row gap-2 grow-0 shrink-0 basis-auto">
+        <div className="bg-[white] box-border flex justify-start items-stretch flex-col  rounded-2xl ">
+          <div className="flex justify-between items-center flex-row gap-2 w-full grow-0 shrink-0 basis-auto">
             <div className="flex justify-start items-center flex-row grow-0 shrink-0 basis-auto">
               <span className="w-2 h-2 bg-blue_maincolor rounded-full"></span>
 
