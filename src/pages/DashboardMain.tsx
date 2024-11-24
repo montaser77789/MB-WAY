@@ -13,12 +13,12 @@ const DashboardMain = () => {
 
 
   return (
-    <div className="  container">
+    <div className="  ">
 
         <div className="flex flex-wrap gap-4">
   {/* البطاقة الأولى */}
-  <div className="lg:w-[calc(50%-0.5rem)] w-full rounded-md border border-gray_maincolor shadow-sm px-4 py-4">
-    <div className="flex ju  items-center gap-2 mb-4">
+  <div className="md:w-[calc(50%-0.5rem)] w-full rounded-md border border-gray_maincolor shadow-sm px-4 py-4">
+    <div className="flex   items-center gap-2 mb-4">
       <span className="w-2 h-2 bg-blue_maincolor rounded-full"></span>
       <p className="text-blue_maincolor font-bold">{t("almostFinished")}</p>
     </div>
@@ -50,10 +50,10 @@ const DashboardMain = () => {
       </div>
     </div>
     <div className="w-full flex gap-2 justify-center mt-4">
-      <Button className="text-nowrap px-4 lg:px-3 xl:px-4 " variant={"outline"}>
+      <Button className="text-nowrap px-4 md:px-3 xl:px-4 " variant={"outline"}>
         <TbCalendarClock size={20} className="mr-2" /> {t("remindLater")}
       </Button>
-      <Button className="text-nowrap px-4 lg:px-3 xl:px-4 " variant={"default"}>
+      <Button className="text-nowrap px-4 md:px-3 xl:px-4 " variant={"default"}>
         <IoIosNotificationsOutline className="mr-2" size={20} />{" "}
         {t("employeeAlert")}
       </Button>
@@ -61,7 +61,7 @@ const DashboardMain = () => {
   </div>
 
   {/* البطاقة الثانية */}
-  <div className="lg:w-[calc(50%-0.5rem)] w-full rounded-md border border-gray_maincolor shadow-sm px-4 py-4">
+  <div className="md:w-[calc(50%-0.5rem)] w-full rounded-md border border-gray_maincolor shadow-sm px-4 py-4">
     <div className="flex ju  items-center gap-2 mb-4">
       <span className="w-2 h-2 bg-blue_maincolor rounded-full"></span>
       <p className="text-blue_maincolor font-bold">{t("almostFinished")}</p>
@@ -94,10 +94,10 @@ const DashboardMain = () => {
       </div>
     </div>
     <div className="w-full flex gap-2 justify-center mt-4">
-      <Button className="text-nowrap px-4 lg:px-3 xl:px-4 " variant={"outline"}>
+      <Button className="text-nowrap px-4 md:px-3 xl:px-4 " variant={"outline"}>
         <TbCalendarClock size={20} className="mr-2" /> {t("remindLater")}
       </Button>
-      <Button className="text-nowrap px-4 lg:px-3 xl:px-4 " variant={"default"}>
+      <Button className="text-nowrap px-4 md:px-3 xl:px-4 " variant={"default"}>
         <IoIosNotificationsOutline className="mr-2" size={20} />{" "}
         {t("employeeAlert")}
       </Button>

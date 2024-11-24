@@ -22,7 +22,7 @@ lg:col-span-2 lg:transform-none lg:static
 fixed top-0 bottom-0 right-0  transform transition-transform duration-500 ease-in-out ${
 isOpenInboxMessage ? "translate-x-0" : "translate-x-full"
 }`}
-    style={{ zIndex: 40 }}
+    style={{ zIndex: 55 }}
   >
     <div className="box-border flex flex-col items-stretch justify-center h-[120px] lg:h-[70px] border-b-4 border-gray-400 ">
       <div className="flex flex-row items-center justify-between lg:justify-start  w-full h-full  ">

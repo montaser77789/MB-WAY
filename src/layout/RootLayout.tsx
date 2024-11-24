@@ -5,24 +5,26 @@ import InboxMessage from "../components/layout/InboxMessage";
 
 const RootLayout = () => {
   return (
-    <div
-      className="grid grid-cols-[auto_1fr_auto] min-h-screen overflow-x-hidden"
-    >
-      <SidePar />
+    <>
+      <Navbar />
 
-      <div className="flex flex-col">
-        <div className="w-full ml-[22px] md:ml-[200px]">
-          <Navbar />
+      <div className="grid grid-cols-12 gap-4">
+        {/* Sidebar for mobile screens */}
+        <div className="col-span-12 lg:col-span-2">
+          <SidePar />
         </div>
-        <div className="ml-[0px] md:ml-[220px]">
+        
+        {/* Main Content */}
+        <div className="col-span-12 lg:col-span-8">
           <Outlet />
         </div>
-      </div>
 
-      <div className="ml-[0px] md:ml-[10px] mt-[100px] h-auto">
-        <InboxMessage />
+        {/* Inbox message for larger screens */}
+        <div className="col-span-12 lg:col-span-2">
+          <InboxMessage />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
