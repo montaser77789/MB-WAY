@@ -14,7 +14,7 @@ const RootLayout = () => {
         <div className="w-full ml-[22px] md:ml-[200px]">
           <Navbar />
         </div>
-        <div className="ml-[0px] md:ml-[200px]">
+        <div className="ml-[0px] md:ml-[220px]">
           <Outlet />
         </div>
       </div>

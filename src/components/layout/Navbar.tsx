@@ -22,8 +22,8 @@ const Navbar = () => {
   };
   return (
 <header className="p-4 z-50 w-full">
-<div className="flex justify-between items-center max-w-7xl mx-auto">
-        <div className="flex gap-2 items-center">
+<div className="flex justify-between min-w-full items-center ">
+        <div className="flex items-center">
           <div>
             <img
               className="w-10 h-10 border rounded-full hidden lg:block"
