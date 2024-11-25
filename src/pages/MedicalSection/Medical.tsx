@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   BarChart,
   Bar,
@@ -33,12 +32,6 @@ const chartData2 = [
 ];
 
 const Medical = () => {
-  const [isScrollable, setIsScrollable] = useState(false);
-
-  const handleClick = () => {
-    setIsScrollable((prev) => !prev);
-  };
-
   return (
     <div>
       <div className="grid grid-cols-12 gap-3 overflow-hidden">
@@ -139,9 +132,8 @@ const Medical = () => {
               height: 300,
               overflowX: "auto",
               overflowY: "hidden",
-
             }}
-             className="sidebar-scrollbar   scrollbar-thumb-blue_maincolor sidebar-scrollbar"
+            className="sidebar-scrollbar   scrollbar-thumb-blue_maincolor sidebar-scrollbar"
           >
             <div style={{ width: "500px", height: "100%" }}>
               <ResponsiveContainer width="100%" height="100%">
@@ -173,35 +165,40 @@ const Medical = () => {
       {/* القسم الثاني */}
       <div className="grid grid-cols-12 gap-3 mt-4">
         <div className="col-span-12 md:col-span-6">
-     
-        <div className=" sidebar-scrollbar scrollbar-thumb-blue_maincolor sidebar-scrollbar" style={{ width: "100%", height: 300, overflowX: "auto", overflowY: "hidden" }}>
-  <div style={{ minWidth: "500px", height: "100%" }}>
-    <ResponsiveContainer width="100%" height="100%">
-      <BarChart
-        data={chartData}
-        barSize={10}
-        margin={{
-          top: 20,
-          right: 30,
-          left: 20,
-          bottom: 5,
-        }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-        {/* العمود الأول */}
-        <Bar dataKey="pv" fill="#0017C2" />
-        {/* العمود الثاني */}
-        <Bar dataKey="uv" fill="#3FBDF1" />
-      </BarChart>
-    </ResponsiveContainer>
-  </div>
-</div>
-
-
+          <div
+            className=" sidebar-scrollbar scrollbar-thumb-blue_maincolor sidebar-scrollbar"
+            style={{
+              width: "100%",
+              height: 300,
+              overflowX: "auto",
+              overflowY: "hidden",
+            }}
+          >
+            <div style={{ minWidth: "500px", height: "100%" }}>
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart
+                  data={chartData}
+                  barSize={10}
+                  margin={{
+                    top: 20,
+                    right: 30,
+                    left: 20,
+                    bottom: 5,
+                  }}
+                >
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <XAxis dataKey="name" />
+                  <YAxis />
+                  <Tooltip />
+                  <Legend />
+                  {/* العمود الأول */}
+                  <Bar dataKey="pv" fill="#0017C2" />
+                  {/* العمود الثاني */}
+                  <Bar dataKey="uv" fill="#3FBDF1" />
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
+          </div>
         </div>
         <div className="col-span-12 md:col-span-6">
           {/* محتوى إضافي يمكن إضافته هنا */}
