@@ -132,14 +132,18 @@ const Medical = () => {
           </div>
         </div>
         <div className="col-span-12 md:col-span-7">
+          <div className="flex justify-end p-2 text-[#9C9C9C]">View All</div>
           <div
-            className={`min-w-[100%] ${
-              isScrollable ? "overflow-x-auto" : ""
-            } transition-all duration-300`}
-            onClick={handleClick}
+            style={{
+              width: "100%",
+              height: 300,
+              overflowX: "auto",
+              overflowY: "hidden",
+
+            }}
+             className="sidebar-scrollbar   scrollbar-thumb-blue_maincolor sidebar-scrollbar"
           >
-            <div className="flex justify-end p-2 text-[#9C9C9C]">View All</div>
-            <div style={{ width: "100%", height: 300 }}>
+            <div style={{ width: "500px", height: "100%" }}>
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart
                   data={chartData2}
@@ -158,7 +162,7 @@ const Medical = () => {
                   <Legend />
                   {/* تغيير لون العمود الأول */}
                   <Bar dataKey="pv" fill="#0017C2" />
-                  {/* تغيير لون العمود الثاني */}
+                  {/* إضافة أعمدة أخرى عند الحاجة */}
                 </BarChart>
               </ResponsiveContainer>
             </div>
@@ -169,37 +173,35 @@ const Medical = () => {
       {/* القسم الثاني */}
       <div className="grid grid-cols-12 gap-3 mt-4">
         <div className="col-span-12 md:col-span-6">
-          <div
-            className={`w-full ${
-              isScrollable ? "overflow-x-auto" : ""
-            } transition-all duration-300`}
-            onClick={handleClick}
-          >
-            <div style={{ width: "100%", height: 300 }}>
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart
-                  data={chartData}
-                  barSize={10}
-                  margin={{
-                    top: 20,
-                    right: 30,
-                    left: 20,
-                    bottom: 5,
-                  }}
-                >
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis dataKey="name" />
-                  <YAxis />
-                  <Tooltip />
-                  <Legend />
-                  {/* تغيير لون العمود الأول */}
-                  <Bar dataKey="pv" fill="#0017C2" />
-                  {/* تغيير لون العمود الثاني */}
-                  <Bar dataKey="uv" fill="#3FBDF1" />
-                </BarChart>
-              </ResponsiveContainer>
-            </div>
-          </div>
+     
+        <div className=" sidebar-scrollbar scrollbar-thumb-blue_maincolor sidebar-scrollbar" style={{ width: "100%", height: 300, overflowX: "auto", overflowY: "hidden" }}>
+  <div style={{ minWidth: "500px", height: "100%" }}>
+    <ResponsiveContainer width="100%" height="100%">
+      <BarChart
+        data={chartData}
+        barSize={10}
+        margin={{
+          top: 20,
+          right: 30,
+          left: 20,
+          bottom: 5,
+        }}
+      >
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis dataKey="name" />
+        <YAxis />
+        <Tooltip />
+        <Legend />
+        {/* العمود الأول */}
+        <Bar dataKey="pv" fill="#0017C2" />
+        {/* العمود الثاني */}
+        <Bar dataKey="uv" fill="#3FBDF1" />
+      </BarChart>
+    </ResponsiveContainer>
+  </div>
+</div>
+
+
         </div>
         <div className="col-span-12 md:col-span-6">
           {/* محتوى إضافي يمكن إضافته هنا */}
