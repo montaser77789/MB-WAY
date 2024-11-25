@@ -2,30 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 body {
     height: 2000px;
 }
+
 .sidebar-scrollbar::-webkit-scrollbar {
     width: 10px; 
     height: 12px; 
-  }
+}
   
-  /* تصميم العمود نفسه */
-  .sidebar-scrollbar::-webkit-scrollbar-thumb {
-    background-color: #0017c2; /* لون العمود */
-    border-radius: 6px; /* حواف مستديرة */
-  }
+.sidebar-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #0017c2;
+    border-radius: 6px; 
+}
   
-  /* الخلفية خلف عمود التمرير */
-  .sidebar-scrollbar::-webkit-scrollbar-track {
-    background-color: #f0f0f0; /* لون الخلفية */
-  }
+.sidebar-scrollbar::-webkit-scrollbar-track {
+    background-color: #f0f0f0; 
+}
 
-  @layer {
-    .container  {
-      @apply m-auto
+@layer components {
+    .container {
+        @apply m-auto;
     }
-  }
-  
+
+    .titles {
+        @apply text-blue_maincolor text-[18px] font-bold leading-5;
+    }
+
+    .label {
+        @apply text-blue_maincolor text-[16px] font-medium;
+    }
+
+    .shadow-card {
+        @apply shadow-md rounded-md border border-gray_maincolor p-2;
+    }
+    .circle {
+      @apply w-2 h-2 rounded-full flex items-center justify-center bg-blue_maincolor;
+    }
+}
